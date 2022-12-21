@@ -1,20 +1,23 @@
-<div class="socials">
-	{% if options.visit_facebook %}
-		<a href="{{ options.visit_facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<div class="socials text-center">
+	{% if options.facebook %}
+		<a href="{{ options.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
 	{% endif %}
-	{% if options.visit_twitter %}
-		<a href="{{ options.visit_twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+	{% if options.twitter %}
+		<a href="{{ options.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
 	{% endif %}
-	{% if options.visit_instagram %}
-		<a href="{{ options.visit_instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+	{% if options.instagram %}
+		<a href="{{ options.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
 	{% endif %}
-	{% if options.visit_linkedin %}
-		<a href="{{ options.visit_linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+	{% if options.linkedin %}
+		<a href="{{ options.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
 	{% endif %}
-	{% if options.visit_email %}
-		<a href="mailto:{{ options.visit_email }}" target="_blank"><i class="fal fa-envelope"></i></a>
+	{% if options.pinterest %}
+		<a href="{{ options.pinterest }}" target="_blank"><i class="fab fa-pinterest"></i></a>
 	{% endif %}
-	{% if options.visit_whatsapp %}
-		<a href="https://wa.me/{{ options.visit_whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+	{% if options.email %}
+		<a href="mailto:{{ options.email }}" target="_blank"><i class="fal fa-envelope"></i></a>
+	{% endif %}
+	{% if options.whatsapp %}
+		<a href="https://wa.me/{{ options.whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i></a>
 	{% endif %}
 </div>
