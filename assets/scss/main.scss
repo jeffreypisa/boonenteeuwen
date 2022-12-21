@@ -1,0 +1,41 @@
+/*!
+Theme Name: Boon & Teeuwen
+Theme URI: https://www.boonteeuwen.nl
+Author: Emonks
+Author URI: https://www.emonks.nl
+Description: Thema ontwikkeld door emonks.nl
+Version: 1.1
+Text Domain: myproject
+!*/
+
+@import 'common/variables';
+
+@import '../../bower_components/bootstrap/scss/bootstrap';
+@import '../../bower_components/slick-carousel/slick/slick.scss';
+
+@import '../fonts/fonts';
+
+@import '../fonts/light.css';
+@import '../fonts/brands.css';
+@import '../fonts/fontawesome.css';
+
+@import 'common/base';
+@import 'common/tease';
+@import 'common/single';
+@import 'common/socials';
+@import 'common/buttons';
+@import 'common/section';
+@import 'common/carousel';
+@import 'common/colors';
+@import 'common/cards';
+@import 'common/modal';
+@import 'common/form';
+@import 'common/dropdownmenu';
+
+@import 'modules/footer';
+@import 'modules/content';
+@import 'modules/header';
+@import 'modules/pageheader';
+@import 'modules/singleheader';
+@import 'modules/accordion';
+@import 'modules/mobilemenu';

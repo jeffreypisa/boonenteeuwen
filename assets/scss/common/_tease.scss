@@ -1,0 +1,20 @@
+.card.tease[href] {
+	height: calc( 100% - 30px );
+	background: $darkblue;
+	h3 {
+		margin: 10px;
+		padding-bottom: 6px;
+		color: #fff;
+	}
+	.img-container {
+		background: $darkblue;
+		transition: opacity 0.3s ease-in-out;
+		opacity: 1;
+	}
+	&:hover {
+		background: $darkblue;
+		.img-container {
+			opacity: 0.6;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<section class="mod-projecten" data-aos="fade-up" data-aos-duration="800">
+	<div class="container-fluid">
+  	<div class="text-center">
+			<h3> PROJECTEN </h3>
+		</div>
+		<div class="cards cards-archive">
+			<div class="row justify-content-center">
+				{% for item in projecten %}
+					<div class="col-md-6 col-lg-4">
+			      <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{delay}}">
+			      	{% include 'tease.twig' %}
+			      </div>
+					</div>
+		      {% set delay = delay + 100 %}
+	      {% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

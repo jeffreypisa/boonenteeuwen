@@ -1,0 +1,176 @@
+.single .mod-singleheader {
+	position: relative;
+	.titlebar {
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+}
+.page .mod-singleheader, .error404 .mod-singleheader {
+	.bg {
+		padding: 0;
+		height: 320px;
+	}
+	.titlebar {
+		padding: 20px;
+		&.tweekolom {
+			position: absolute;
+			padding: 20px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0;
+			z-index: 1;
+		}
+	}
+}
+.mod-singleheader {
+	padding-top: 0;
+	.bg {
+		padding-bottom: 75%;
+		background-size: cover;
+		background-position: center center;
+		margin-bottom: 30px;
+		position: relative;
+		&:after {
+			position: absolute;
+	    // content: '';
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    opacity: 0.2;
+	    z-index: 0;
+	    background: $darkblue;
+		}
+	}
+	h2, h4 {
+		color: #fff;
+	}
+	h4 {
+		margin-bottom: 10px;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+	.nextprev {
+		position: fixed;
+    top: calc(50vh - 30px);
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    line-height: 53px;
+    text-align: center;
+		background: $darkblue;
+		border-radius: 100px;
+		transition: 0.2s ease-in-out;
+		i {
+			color: #fff;
+			font-size: 21px;
+		}
+		&:hover {
+			background: $red;
+		}
+		&.prev {
+			left: 5px;
+			i {
+				margin-left: -3px;
+			}
+		}
+		&.next {
+			right: 5px;
+			i {
+				margin-right: -3px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.mod-singleheader {
+		.titlebar {
+			margin-top: -100px;
+			background: $darkblue;
+			padding: 50px;
+			margin-bottom: 30px;
+			h2 {
+				margin: 0;
+			}
+		}
+		.card {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.single .mod-singleheader {
+		position: relative;
+		.titlebar {
+			position: absolute;
+			top: 60px;
+			left: 90px;
+			right: auto;
+			width: 75%;
+			z-index: 3;
+		}
+		.pull-up {
+			margin-top: -200px;
+		}
+	}
+	.page .mod-singleheader, .error404 .mod-singleheader {
+		.bg {
+			padding: 0;
+			height: 500px;
+		}
+		.pull-up {
+			margin-top: -300px;
+		}
+		.titlebar {
+			padding: 0;
+			&.tweekolom {
+				bottom: 0;
+				left: 30px;
+				right: 30px;
+				margin: 0;
+			}
+		}
+	}
+	.mod-singleheader {
+		h2 {
+			text-shadow: 0px 1px 3px rgba(0,0,0,.2);
+		}
+		.pull-up {
+			margin: -50vh 50px 30px 50px;
+			.card {
+				margin: 0 0 30px;
+			}
+		}
+		.nextprev {
+			&.prev {
+				left: 15px;
+				i {
+					margin-left: -3px;
+				}
+			}
+			&.next {
+				right: 15px;
+				i {
+					margin-right: -3px;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.single .mod-singleheader {
+		.pull-up {
+			margin-top: -400px;
+		}
+	}
+	.mod-singleheader {
+		.pull-up {
+			margin: -70vh 50px 30px 50px;
+		}
+	}
+}

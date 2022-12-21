@@ -1,0 +1,83 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="single content-wrapper">
+		<h1 class="d-none"> {{ post.title }} </h1>
+		<div class="post-type-{{ post.post_type }} content" id="post-{{ post.ID }}">
+			<section class="mod-singleheader">
+				{% if post.prev %}
+					<a href="{{ post.prev.link }}" class="nextprev prev">
+						<i class="fal fa-chevron-left"></i>
+					</a>
+				{% endif %}
+				{% if post.next %}
+					<a href="{{ post.next.link }}" class="nextprev next">
+						<i class="fal fa-chevron-right"></i>
+					</a>
+				{% endif %}
+				{% if post.title %} 
+					<div class="titlebar d-none d-md-block">
+						<h4> {{ post.terms('werkgebieden')|join(', ') }}</h4>
+        		<h2 class="h1"> {{ post.title }} </h2>
+					</div>
+        {% endif %} 
+				<div class="container-fluid">
+					<div class="bg bg-cover" style="background-image: url({{ post.thumbnail.src }});">
+	        </div>
+					<div class="row">
+						<div class="col-md-8 col-lg-7 col-xl-6">
+							<div class="pull-up">
+								{% if post.title %} 
+									<div class="titlebar d-block d-md-none">
+										<h4> {{ post.terms('werkgebieden')|join(', ') }}</h4>
+				        		<h2 class="h1"> {{ post.title }} </h2>
+									</div>
+				        {% endif %} 
+								<div class="card">
+									<div class="card-body">
+										{{ post.content }}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% if post.afbeeldingen %}
+						<div class="row">
+							{% for p in post.get_field('afbeeldingen') %}
+								<div class="col-xl-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{delay}}">
+									<div class="bg bg-cover" style="background-image: url({{ p.url|resize(1024) }})"> </div>
+								</div>	
+								{% set delay = delay + 100 %}
+							{% endfor %} 
+						</div>
+					{% endif %}
+				</div>
+			</section>
+			<section class="mod-projecten bg-lightgrey" data-aos="fade-up" data-aos-duration="800">
+				<div class="container">
+					<div class="text-center">
+						<h4 style="margin:0"> GERELATEERD </h4>
+						<p> Andere mooie projecten </p>
+						<br>
+					</div>
+					<div class="row justify-items-center">
+						{% for item in projecten %}
+							<div class="col-md-6">
+					      <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ delay }}">
+					      	{% include 'tease.twig' %}
+					      </div>
+							</div>
+				      {% set delay = delay + 100 %}
+			      {% endfor %}
+					</div>
+					<br>
+					<div class="text-center">
+						<a href="/projecten" class="btn-link"><i class="fal fa-chevron-circle-left"></i> Terug naar projecten</a>
+						<br><br>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+{% endblock %}

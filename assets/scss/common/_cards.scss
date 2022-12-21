@@ -1,0 +1,64 @@
+.card, a.card[href] {
+  display: block;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0px 1px 3px rgba($grey,0.3);
+  position: relative;
+  overflow:hidden;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 30px;
+  .card-img-top {
+    position: relative;
+    padding-bottom: 75%;
+    background-size: cover;
+    background-position: center center;
+    background-color: $grey;
+    width: 100%;
+    border-radius: 0;
+  }
+  &.card-dark {
+	  background: $grey;
+	  h1,h2,h3 {
+		  color: #fff;
+		  text-transform: none;
+	  }
+  }
+  .text-overlay {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  padding: 10px;
+	  h5 {
+		  color:#fff;
+		  margin: 0;
+	  }
+  }
+}
+
+a.card[href]:hover {
+  box-shadow: 0 20px 40px 0 rgba($grey,0.50);
+}
+
+section {
+	.card {
+		margin: 0;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.card {
+		.card-body {
+			padding: 40px;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.card {
+		.card-body {
+			padding: 60px;
+		}
+	}
+}

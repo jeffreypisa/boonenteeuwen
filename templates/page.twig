@@ -1,0 +1,57 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<h1 class="d-none"> {{ post.title }} </h1>
+			<div class="article-body">
+				{% if fn('is_front_page') %}
+			  	{% include 'pagebuilder.twig' %}
+			  {% else %}
+			  	<section class="mod-singleheader">
+						<div class="container-fluid">
+							<div class="bg bg-cover" style="background-image: url({{ post.thumbnail.src }});">
+								{% if post.tweekolom %}
+									<div class="titlebar tweekolom">
+										<div class="row">
+											<div class="col-md-8">
+												<h2 class="h1"> {{ post.title }} </h2>
+											</div>
+										</div>
+									</div>
+			          {% endif %} 
+			        </div>
+			        {% if post.tweekolom %}
+								<div class="row">
+									<div class="col-md-5 offset-md-1 col-lg-4 offset-lg-2">
+										{{ post.content }}
+									</div>
+									<div class="col-md-6">
+										{{ post.content2 }}
+									</div>
+								</div>								
+							{% else %}	
+								<div class="row">
+									<div class="col-md-8 col-xl-">
+										<div class="pull-up">
+											{% if post.title %} 
+												<div class="titlebar">
+						          		<h2 class="h1"> {{ post.title }} </h2>
+												</div>
+						          {% endif %} 
+											<div class="card">
+												<div class="card-body">
+													{{ post.content }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							{% endif %}
+						</div>
+					</section>
+				{% endif %}
+			</div>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

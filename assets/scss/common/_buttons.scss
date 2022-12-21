@@ -1,0 +1,118 @@
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+.btn-link {
+	font-size: 21px;
+	color: $darkblue;
+	&:hover {
+		color: $red;
+		text-decoration: none;
+	}
+	&:focus, &:active, &:target, &:not(:disabled):not(.disabled):active {
+    color: lighten($red, 6%);
+    text-decoration: none;
+  }
+}
+.btn, .field-wrap input[type=button] {
+  height: 40px;
+  line-height: 34px;
+  border-radius: 0;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  &:focus, &:active, &:target, &:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background: #fff;
+    opacity: 1;
+    border-color: #fff;
+  }
+  &:hover {
+    background: #fff;
+    cursor: pointer;
+		box-shadow: 0 6px 12px 0 rgba($lightgrey,0.50);
+  }
+}
+
+.btn.btn-sm {
+	height: 40px;
+	line-height: 40px;
+}
+.btn-outline-primary {
+  border-color: $darkblue;
+  border-width: 2px;
+  &:hover {
+    color: #fff;
+    background: $darkblue;
+    opacity: 1;
+    border-color: $darkblue;
+  }
+}
+
+.btn-outline-secondary, .field-wrap input[type=button] {
+  border: 2px solid $red;
+  color: $red;
+  background: transparent;
+  border-width: 2px;
+  &:hover {
+    color: #fff;
+    background: $red;
+    opacity: 1;
+    border-color: $red;
+  }
+}
+
+.btn-light {
+  color: $red;
+  &:hover {
+    color: #fff;
+    background: $red;
+    opacity: 1;
+    border-color: $red;
+  }
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  &:hover {
+    color: $darkblue;
+    background: darken(#fff, 6%);
+    border-color: darken(#fff, 6%);
+    opacity: 1;
+  }
+}
+
+.btn-primary {
+  border: 0;
+  background: $grey;
+  border-color: $grey;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    color: #fff;
+    background: $red;
+    border-color: $red;
+  }
+  &:focus, &:active, &:target, &:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background: lighten($red, 6%);
+    border-color: lighten($red, 6%);
+  }
+}
+
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}
